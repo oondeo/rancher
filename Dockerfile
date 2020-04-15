@@ -1,4 +1,5 @@
-FROM rancher/rancher:${DOCKER_TAG}
+ARG TAG=${DOCKER_TAG}
+FROM rancher/rancher:${TAG}
 
 RUN mv /usr/bin/rancher-machine /usr/bin/rancher-machine.bin  \
     && mv /usr/bin/jailer.sh /usr/bin/jailer.sh.bin
